@@ -7,9 +7,11 @@
       <el-header>
         <nav-bar></nav-bar>
       </el-header>
-      <el-main>
-        <router-view></router-view>
-      </el-main>
+      <el-scrollbar style="height: 100%">
+        <el-main>
+          <router-view></router-view>
+        </el-main>
+      </el-scrollbar>
     </el-container>
   </el-container>
 </template>
@@ -37,6 +39,7 @@ export default {
 <style>
 .el-header {
   color: #333;
+  padding: 0 !important;
   text-align: center;
   line-height: 60px;
   height: 100%;
@@ -45,11 +48,15 @@ export default {
 .el-main {
   background-color: rgb(245, 245, 245);
   color: #333;
+  height: 100%;
 }
 
-#app > .el-container {
+#app > .menu-container, #app > .el-container {
   margin-bottom: 40px;
   height: 100%;
-  overflow: hidden;
+}
+
+.el-scrollbar__wrap {
+  overflow-x: hidden !important;
 }
 </style>

@@ -20,6 +20,12 @@ const routes = [
         title: '首页'
       },
       component: () => import('@/views/dashboard')
+    }, {
+      path: '/leaseHouse',
+      meta: {
+        title: '出租房源'
+      },
+      component: () => import('@/views/leaseHouse/leaseHouse')
     }]
   }
 ];

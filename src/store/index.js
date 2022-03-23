@@ -1,12 +1,18 @@
-import Vue from "vue";
-import Vuex from "vuex";
+import Vue from 'vue';
+import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
+  state: {
+    menuIsCollapse: false
+  },
   getters: {},
-  mutations: {},
+  mutations: {
+    changeMenuCollapse(state, data) {
+      state.menuIsCollapse = !state.menuIsCollapse;
+    }
+  },
   actions: {},
-  modules: {},
+  modules: {}
 });
