@@ -10,7 +10,7 @@
         </el-button>
       </div>
       <div class="mt20">
-        <el-table row-key="id" v-loading="loading" :data="dataSource" @selection-change="handleSelectionChange">
+        <el-table border row-key="id" v-loading="loading" :data="dataSource" @selection-change="handleSelectionChange">
           <el-table-column
             type="selection"
             width="55">
@@ -59,7 +59,6 @@
 </template>
 
 <script>
-import { getAction, deleteAction } from '@/api/methods';
 import { regionData } from '@/cityData/data';
 import { mixins } from '@/mixins';
 import AddLeaseHouse from '@/views/leaseHouse/addLeaseHouse';

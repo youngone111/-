@@ -49,7 +49,6 @@
         </template>
       </el-menu>
     </el-scrollbar>
-    <div class="collapse-button" @click="toggleCollapse">></div>
   </div>
 </template>
 
@@ -70,21 +69,37 @@ export default {
           }
         },
         {
-          title: '管理房源',
+          title: '房源管理',
           meta: {},
           children: [{
-            title: '出售房源',
-            meta: {}
-          }, {
-            title: '出租房源',
+            title: '房源列表',
             meta: {},
             path: '/leaseHouse'
           }, {
-            title: '房源地区',
-            meta: {}
+            title: '房源审核',
+            meta: {},
+            path: '/leaseReview'
           }]
-        }, {
-          title: '管理新楼',
+        },
+        {
+          title: '用户管理',
+          meta: {},
+          children: [{
+            title: '用户列表',
+            meta: {},
+            path:'/userList'
+          }, {
+            title: '认证房东审核',
+            meta: {},
+            path:'/landlordList'
+          }]
+        },
+        {
+          title: '操作日志',
+          meta: {}
+        },
+        {
+          title: '管理员列表',
           meta: {}
         }
       ]

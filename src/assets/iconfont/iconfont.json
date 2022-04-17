@@ -1,0 +1,23 @@
+{
+  "id": "3311373",
+  "name": "GP",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6598354",
+      "name": "woman",
+      "font_class": "woman",
+      "unicode": "e8f1",
+      "unicode_decimal": 59633
+    },
+    {
+      "icon_id": "4766966",
+      "name": "man",
+      "font_class": "man",
+      "unicode": "e7e2",
+      "unicode_decimal": 59362
+    }
+  ]
+}

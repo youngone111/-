@@ -26,6 +26,24 @@ const routes = [
         title: '出租房源'
       },
       component: () => import('@/views/leaseHouse/leaseHouse')
+    }, {
+      path: '/leaseReview',
+      meta: {
+        title: '房源审核'
+      },
+      component: () => import('@/views/leaseReview/leaseReview')
+    }, {
+      path: '/userList',
+      meta: {
+        title: '用户列表'
+      },
+      component: () => import('@/views/userList/userList')
+    }, {
+      path: '/landlordList',
+      meta: {
+        title: '认证房东审核'
+      },
+      component: () => import('@/views/landlordList/landlordList')
     }]
   }
 ];

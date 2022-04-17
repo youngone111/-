@@ -15,7 +15,7 @@ export const mixins = {
   },
   methods: {
     loadData(arg) {
-      if (!this.url.list) {
+      if (!this.url||!this.url.list) {
         this.$message.error('请设置url的list属性!');
         return;
       }
