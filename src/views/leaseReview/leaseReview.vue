@@ -1,12 +1,12 @@
 <template>
   <el-card>
-    <el-table ></el-table>
+    <el-table></el-table>
   </el-card>
 </template>
 
 <script>
 export default {
-  name: 'leaseReview',
+  name: "leaseReview",
   data() {
     return {
       dataSource: {}
@@ -15,6 +15,4 @@ export default {
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -1,9 +1,9 @@
-import { axios } from '@/api/request';
+import { axios } from "@/api/request";
 
 export function postAction(url, parameter) {
   return axios({
     url: url,
-    method: 'post',
+    method: "post",
     timeout: 10000,
     data: parameter
   });
@@ -12,10 +12,10 @@ export function postAction(url, parameter) {
 export function postJson(url, parameter) {
   return axios({
     url: url,
-    method: 'post',
+    method: "post",
     timeout: 10000,
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json"
     },
     data: JSON.stringify(parameter)
   });
@@ -24,7 +24,7 @@ export function postJson(url, parameter) {
 export function putAction(url, parameter) {
   return axios({
     url: url,
-    method: 'put',
+    method: "put",
     data: parameter
   });
 }
@@ -32,7 +32,7 @@ export function putAction(url, parameter) {
 export function getAction(url, parameter) {
   return axios({
     url: url,
-    method: 'get',
+    method: "get",
     params: parameter
   });
 }
@@ -40,7 +40,7 @@ export function getAction(url, parameter) {
 export function deleteAction(url, parameter) {
   return axios({
     url: url,
-    method: 'delete',
+    method: "delete",
     params: parameter
   });
 }

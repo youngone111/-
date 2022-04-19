@@ -1,7 +1,7 @@
 let data = require("./data.json");
 let provinceObject = data["86"];
 let regionData = [];
-let provinceAndCityData = []
+let provinceAndCityData = [];
 for (const prop in provinceObject) {
   regionData.push({
     value: prop, // 省份code值

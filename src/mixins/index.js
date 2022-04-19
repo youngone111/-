@@ -1,4 +1,4 @@
-import { getAction, postAction, putAction, deleteAction } from '@/api/methods';
+import { getAction, postAction, putAction, deleteAction } from "@/api/methods";
 
 export const mixins = {
   data() {
@@ -15,8 +15,8 @@ export const mixins = {
   },
   methods: {
     loadData(arg) {
-      if (!this.url||!this.url.list) {
-        this.$message.error('请设置url的list属性!');
+      if (!this.url || !this.url.list) {
+        this.$message.error("请设置url的list属性!");
         return;
       }
       if (arg === 1) {
@@ -31,7 +31,7 @@ export const mixins = {
           this.queryParams.pageSize = res.result.pageSize;
           this.total = res.result.total;
         } else {
-          this.$message.error('查询数据失败');
+          this.$message.error("查询数据失败");
         }
         this.loading = false;
       });
@@ -50,35 +50,37 @@ export const mixins = {
     handleAdd() {
       this.$refs.addForm.add();
       this.$refs.addForm.disabled = false;
-      this.$refs.addForm.title = '新增';
+      this.$refs.addForm.title = "新增";
     },
     handleEdit(id) {
       this.$refs.addForm.edit(id);
       this.$refs.addForm.disabled = false;
-      this.$refs.addForm.title = '编辑';
+      this.$refs.addForm.title = "编辑";
     },
     handleSelectionChange(e) {
       this.batchId = e.map((item) => {
-        return item = item.id;
+        return (item = item.id);
       });
     },
     handleBatchDelete() {
       if (this.batchId.length !== 0) {
-        deleteAction(this.url.list, { id: this.batchId.join(',') }).then((res) => {
-          console.log(res);
-        });
+        deleteAction(this.url.list, { id: this.batchId.join(",") }).then(
+          (res) => {
+            console.log(res);
+          }
+        );
       }
     },
     handleDetail(id) {
       this.$refs.addForm.edit(id);
       this.$refs.addForm.disabled = true;
-      this.$refs.addForm.title = '详情';
+      this.$refs.addForm.title = "详情";
     },
     handleDelete(id) {
-      this.$confirm('此操作将永久删除该数据, 是否继续?', '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
-        type: 'warning'
+      this.$confirm("此操作将永久删除该数据, 是否继续?", "提示", {
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        type: "warning"
       }).then(() => {
         this.loading = true;
         deleteAction(this.url.list, { id }).then((res) => {
